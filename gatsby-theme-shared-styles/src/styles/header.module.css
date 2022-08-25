@@ -1,0 +1,56 @@
+.header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: var(--bg-dark);
+  position: relative;
+}
+
+.logo {
+  margin: 0;
+  padding: 0.5rem 1rem 0;
+  background-color: var(--bg-dark);
+  /* Test */
+  font-size: 2.5rem;
+  width: 100%;
+}
+
+.navWrap {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  z-index: 9;
+  position: fixed;
+  width: 100%;
+  background-color: var(--bg-dark);
+  /* Test */
+  height: 62px;
+}
+
+.ham-button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navWrap {
+    padding: 0 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ham-button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navWrap {
+    display: grid;
+    grid-template-columns: 250px minmax(auto, 950px);
+    justify-content: center;
+    height: auto;
+  }
+}

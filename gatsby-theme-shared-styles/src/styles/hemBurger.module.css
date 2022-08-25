@@ -1,0 +1,43 @@
+.hem-burger {
+  max-width: 4rem;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 6px;
+  right: 1rem;
+  /* z-index: 1; */
+}
+
+.hem-burger:hover div {
+  background-color: var(--link-hover);
+  transition: 300ms;
+}
+
+.hem-burger div {
+  margin: 5px 0;
+  background-color: var(--link);
+  width: 30px;
+  height: 5px;
+  border-radius: 2px;
+  transform-origin: 1px;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.btn div[data-nav*="true"] div:first-child {
+  transform: rotate(45deg);
+}
+.btn div[data-nav*="true"] div:nth-child(2) {
+  opacity: 0;
+}
+.btn div[data-nav*="true"] div:last-child {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+  .hem-burger {
+    display: none;
+  }
+}

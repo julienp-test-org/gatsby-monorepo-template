@@ -1,0 +1,50 @@
+.menuItems {
+  position: relative;
+}
+
+.menuItems a {
+  position: relative;
+}
+
+/* Arrow for submenu */
+.downArrow::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 1.4rem;
+  right: 0.2rem;
+  border-top: 4px solid var(--link);
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+/* Test */
+.rightArrow::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 1.4rem;
+  right: 0.2rem;
+  border-top: 4px solid var(--link);
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+@media screen and (min-width: 768px) {
+  /* Arrow for submenu */
+  .rightArrow::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 1.2rem;
+    right: 0.5rem;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid var(--link);
+  }
+}

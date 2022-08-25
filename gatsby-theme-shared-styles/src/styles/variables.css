@@ -1,0 +1,30 @@
+:root {
+  /***********************************
+                colors 
+  ************************************/
+  --logo: hsl(42, 100%, 70%);
+  --bg-dark: hsl(0, 0%, 15%);
+  --bg-light: hsl(0, 0%, 97%);
+  --bg-white: hsl(0, 0%, 99%);
+  --bg-dark-hover: hsl(0, 0%, 20%);
+  --text: hsl(0, 0%, 15%);
+  --text-light: var(--bg-light);
+  --heading: var(--logo);
+  --link: var(--logo);
+  --link-hover: hsl(42, 100%, 80%);
+  --link-active: hsl(42, 100%, 65%);
+  --disable: hsl(0, 0%, 85%);
+  --svg-base-color: hsl(0, 0%, 70%);
+  --svg-drawing-color: ;
+  --svg-text-color: hsl(0, 0%, 15%);
+
+  /***********************************
+                sizes 
+  ************************************/
+  --large-screen: 1200px;
+  --extra-large-screen: 1440px;
+
+  /***********************************
+                colors 
+  ************************************/
+}

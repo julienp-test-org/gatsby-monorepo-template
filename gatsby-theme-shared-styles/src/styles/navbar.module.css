@@ -1,0 +1,93 @@
+.navItems {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  top: 62px;
+  left: 0;
+  z-index: -1;
+  background-color: var(--bg-dark);
+  /* overflow: hidden; */
+}
+
+.navItems > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navItems > ul > li {
+  margin: 0;
+  padding: 0;
+}
+.navItems > ul > li > a {
+  display: block;
+  padding: 0.6rem 1rem;
+}
+
+.navItems ul a:hover {
+  background-color: var(--bg-dark-hover);
+  transition: all 300ms ease-in-out;
+}
+
+/* Navigation Animation */
+.navItems.hide {
+  opacity: 0;
+  transform: translateY(-125%); /* remove from screen*/
+  transition: opacity 0.5s ease 0s, transform 0.5s ease 0.5s;
+}
+.navItems > ul.hide {
+  transform: translate(0px, -40px);
+  transition: transform 0.5s ease 0s;
+}
+.navItems.show {
+  opacity: 1;
+  transition: opacity 0.5s ease 0s;
+}
+.navItems > ul.show {
+  transform: translate(0px, 0px);
+  transition: transform 0.5s ease 0s;
+}
+
+@media screen and (min-width: 768px) {
+  .navItems {
+    position: static;
+  }
+  .navItems > ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .navItems > ul > li > a:hover {
+    background-color: var(--bg-dark);
+  }
+  /* Reset hover Animation */
+  .navItems > ul > li > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    max-width: 100px;
+    height: 2px;
+    bottom: 8px;
+    left: 0%;
+    background-color: var(--link-hover);
+    opacity: 0;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .navItems > ul > li > a:hover::before {
+    opacity: 1;
+    left: 0;
+    transform: scaleX(1);
+  }
+  /* Reset Navigation Animation */
+  .navItems.hide {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  .navItems > ul.hide {
+    transform: translate(0px, 0px);
+  }
+}
