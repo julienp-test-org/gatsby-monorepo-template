@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Site Name 11111",
+    title: "Site Name 222222222",
     description: "GatsbyJS is a blazing fast modern site generator for React.",
     menuLinks: [
       {

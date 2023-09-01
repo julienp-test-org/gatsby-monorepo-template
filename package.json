@@ -2,6 +2,7 @@
   "private": true,
   "workspaces": [
     "site",
+    "site2",
     "gatsby-theme-shared-styles"
   ],
   "scripts": {
